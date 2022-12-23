@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.test {
+  background-color: cornflowerblue;
+}
+
+.dxm-control-bar {
+  display: none;
+}
+
+.adjustment {
+  padding-left: 15px;
+  display: flex;
+  padding-top: 15px;
+  z-index: 2;
+  gap: 100px;
+  justify-content: flex-start;
+}
+
+.countriesdropdown {
+  border: 2px solid;
+  z-index: 2;
+  width: 19vw;
+  font-size: 16px;
+  /* height: 30vh; */
+  border-radius: 5px;
+  display: flex;
+  padding-inline: 10px;
+  /* overflow-y: scroll; */
+  justify-content: space-between;
+  font-weight: 400;
+}
+.countriesdropdown svg {
+  transform: rotate(180deg);
+}
+
+.dataBox {
+  width: 20vw;
+  border-radius: 2px;
+  max-height: 50vh;
+  border: 1px solid grey;
+  overflow-y: scroll;
+}
+
+.Countrylist {
+  padding: 5px;
+  border-bottom: 1px solid grey;
+  /* display: inline-block; */
+  /* padding: 5em; */
+  display: flex;
+  gap: 10px;
+  background: #eee;
+}
+
+/* .Countrylist input {
+  display: inline-block;
+  padding: 5em;
+  background: #eee;
+} */
+
+.Countrylist label {
+  padding-left: 10px;
+  display: inline-block;
+  padding-right: 42%;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: aliceblue;
+}
+
+.searchBar {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.highlight{
+  background-color: aqua;
+}
+.normal{
+  word-wrap:normal
+}

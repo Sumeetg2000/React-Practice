@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.firstSection {
+  display: flex;
+}
+
+.stepButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px;
+}
+
+
+.stepButton button {
+  height: 70px;
+  width: 70px;
+  border: 2px solid rgba(177, 168, 168, 0.616);
+  border-radius: 50%;
+  font-weight: 400;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease;
+}
+
+.stepButton span {
+
+  height: -0px;
+  width: 10px;
+  margin: auto;
+  margin-bottom: 60px;
+  background-color: #1db606ab;
+  transition: all 1s ease;
+
+}
+span.validated{
+  margin-bottom: 0px ;
+  height: 60px;
+}
+.stepButton .currentStep{
+  background-color: rgba(71, 68, 228, 0.342);
+}
+
+
+.stepBorder {
+  width: 10%;
+  height: 85vh;
+  position: fixed;
+  z-index: 2;
+}
+
+.topSpace {
+  height: 50px;
+  width: 50px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.ContainerClass {
+  width: 100%;
+  height: 100vh;
+  background: none;
+  border: 2px solid rebeccapurple;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  transition: all 3s ease;
+}
+
+.slider {
+  transition: all 2s ease;
+  height: 100vh;
+  width: 100%;
+}
+
+.testscreen {
+  background-color: rgb(232, 240, 254);
+  transition: all 2s ease;
+  height: 100vh;
+
+}
+
+.firstS {
+  height: 600px;
+  width: 60vw;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.labelClass {
+  font-size: 28px;
+}
+
+
+.errorM {
+  font-size: 18px;
+}
+
+.inputClass {
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
+  background-color: transparent;
+  font-size: 26px;
+}
+.inputClass:focus, .inputClass::-moz-focus-inner{
+  background-color: transparent;
+}
+
+
+.secomndTest {
+   background-color: rgb(232, 240, 254);
+  height: 100vh;
+  transition: all 2s ease;
+
+}
+
+.thirdTest {
+   background-color: rgb(232, 240, 254);
+
+  transition: all 2s ease;
+  height: 100vh;
+
+}
+
+.fourthTest {
+   background-color: rgb(232, 240, 254);
+
+  transition: all 2s ease;
+  height: 100vh;
+}
+
+.fifthTest {
+   background-color: rgb(232, 240, 254);
+
+  transition: all 2s ease;
+  height: 100vh;
+}
+
+.sixthTest {
+   background-color: rgb(232, 240, 254);
+
+  transition: all 2s ease;
+  height: 100vh;
+}
+
+
+.lower {
+  width: 100%;
+  position: absolute;
+  height: 15vh;
+  z-index: 4;
+  bottom: 0vh;
+
+}
+
+.firstNext {
+  width: 100px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(148, 156, 156);
+  color: white;
+  transition: 0.3s;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.firstNext:hover {
+ background-color: rgba(148, 156, 156, 0.788);
+  color: black;
+  transition: 0.3s;
+}
+
+.address {
+  min-height: 70px;
+  max-height: 150px;
+
+}
+
+.manageImage{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.maleDiv{
+  border: 2px solid;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.femaleDiv{
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 5px;
+}
+.male{
+  border-radius: 50%;
+  height: 170px;
+}
+
+.female{
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+}
+
+
+.bgCol{
+  background-color: #462e66;
+}
+
+.testing+.active.firstbutton{
+  display: none;
+}

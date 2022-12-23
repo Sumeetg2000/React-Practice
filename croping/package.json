@@ -1,0 +1,35 @@
+{
+  "name": "croping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rpldy/mock-sender": "0.17.4",
+    "@rpldy/upload-button": "0.17.4",
+    "@rpldy/upload-preview": "0.17.4",
+    "@rpldy/uploady": "0.17.4",
+    "react-image-crop": "8.6.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "styled-components": "5.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

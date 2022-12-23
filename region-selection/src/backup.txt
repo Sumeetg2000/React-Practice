@@ -1,0 +1,189 @@
+import React, { Fragment, useEffect, useState } from "react";
+import Select from "react-select";
+import { SlArrowUp } from "react-icons/sl";
+import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
+import datas from "./countryjson.json";
+function Country() {
+  const [alldata, setAlldata] = useState(datas.detail);
+  const [drop, setDrop] = useState(true);
+  const [dropstate, setDropstate] = useState(true);
+  const [dropcity, setDropcity] = useState(true);
+  console.log(alldata);
+  const [selectedOptions, setSelectedOptions] = useState("Country");
+  const [stateselected, setStateSelected] = useState("State");
+  const [cityselected, setCitySelected] = useState("City");
+  const [statearray, setStatearray] = useState([]);
+  const [cityarray, setCityarray] = useState(null);
+
+  const fetchData = () => {};
+
+  //   setSelectedOptions(Object.keys(alldata));
+  //   useEffect(() => {
+  // setTimeout(function () {
+  //   let optList = document.getElementsByClassName("css-1qprcsu-option");
+  //   //   debugger;
+  //   for (let i = 0; i < optList.length; i++) {
+  //     let item = optList[i];
+  //     let index = i;
+  //     addTitle(item, index);
+  //   }
+  // }, 100);
+  //   }, []);
+
+  // const checkstate = Object.values(alldata)[0].states;
+  // checkstate.map((e) => {
+  //   console.log(e.geography);
+  // });
+
+  //   function addTitle(item, index) {
+  //     let val = item.innerText;
+  //     item.title = val;
+  //   }
+  //   console.log(typeof Object.keys(alldata));
+
+  console.log(cityarray, "cityarray");
+
+  return (
+    // <div onClick={()=>{!drop ? setDrop(true):setDrop(false)}} style={{height:"100vh"}}>
+    <div style={{ height: "100vh" }}>
+      <div className="adjustment">
+        {/* <p>Countries</p> */}
+        <div>
+          <div
+            className="countriesdropdown"
+            onClick={() => {
+              setDrop(!drop);
+              setDropcity(true)
+              setDropstate(true);
+            }}
+          >
+            {" "}
+            {selectedOptions} <SlArrowUp />{" "}
+          </div>
+          {!drop && (
+            <div className="dataBox">
+              {Object.keys(alldata).map((e, index) => (
+                <div
+                  className="Countrylist"
+                  key={index}
+                  onClick={() => {
+                    setSelectedOptions(e);
+                    setStatearray(Object.values(alldata)[index].states);
+                    // check(e, index);
+                  }}
+                >
+                  <input
+                    type="checkbox"
+                    id={e}
+                    onChange={() => console.log(e)}
+                  />
+                  <label htmlFor={e}>{e}</label>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div>
+          <div
+            className="countriesdropdown"
+            onClick={() => {
+              setDropstate(!dropstate);
+              setDropcity(true)
+              setDrop(true);
+            }}
+          >
+            {stateselected} <SlArrowUp />
+          </div>
+          {!dropstate && (
+            <div className="dataBox">
+              {statearray.length > 0 ? (
+                statearray.map((e, index) => (
+                  <div
+                    className="Countrylist"
+                    key={index}
+                    onClick={() => {
+                      setCityarray(e.cities_data.cities);
+                      setStateSelected(e.geography);
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      id={e.geography}
+                      onChange={() => console.log(e.geography)}
+                    />
+                    <label htmlFor={e.geography}>{e.geography}</label>
+                  </div>
+                ))
+              ) : (
+                <div className="Countrylist">
+                  <label>State</label>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        <div>
+          <div
+            className="countriesdropdown"
+            onClick={() => {
+              setDropcity(!dropcity);
+              setDrop(true);
+              setDropstate(true);
+            }}
+          >
+            {cityselected} <SlArrowUp />
+          </div>
+          {!dropcity && (
+            <div className="dataBox">
+              {cityarray !== null && cityarray.length > 0 ? (
+                cityarray.map((e, index) => (
+                  <div
+                    className="Countrylist"
+                    key={index}
+                    onClick={() => {
+                      setCitySelected(e.geography);
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      id={e.geography}
+                      onChange={() => console.log(e.geography)}
+                    />
+                    <label htmlFor={e.geography}>{e.geography}</label>
+                  </div>
+                ))
+              ) : (
+                <div className="Countrylist">
+                  <label>City</label>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+        {/* <select>rghwr
+        {
+            Object.keys(alldata).map((e,index)=> <Fragment>
+                
+                <option key={index}>{e}</option>
+                </Fragment>)
+        }
+        </select> */}
+        {/* <Select 
+          defaultValue={alldata}
+          onChange={setAlldata}
+          options={ Object.keys(alldata)}
+        /> */}
+        {/* <ReactMultiSelectCheckboxes
+            options={[{ label: "All", value: "*" }]}
+          placeholderButtonLabel="Country"
+          setState={setSelectedOptions}
+          value={selectedOptions}
+        ></ReactMultiSelectCheckboxes> */}
+      </div>
+    </div>
+  );
+}
+
+export default Country;

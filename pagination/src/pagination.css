@@ -1,0 +1,12 @@
+.paginationContainer{
+    width: 100%;
+}
+.btn{
+    border: none;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+.btn:hover{
+    background-color: rgba(240, 248, 255, 0.938);
+}
